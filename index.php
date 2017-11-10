@@ -1,0 +1,26 @@
+<?php
+require 'vendor/autoload.php';
+
+use \atk4\ui\Header;
+
+$app = new \atk4\ui\App('Добро пожаловать в игру!');
+$app->initLayout('Centered');
+
+$db = new
+\atk4\data\Persistence_SQL('mysql:dbname=cats;host=127.0.0.1','root','root');
+class cat extends \atk4\data\Model {
+
+	public $table = 'cat';
+
+  function init() {
+
+  	parent::init();
+
+  	$this->addField('name');
+
+  	$this->addField('age');
+    $this->addField('date');
+  	$this->addField('date',['type'=>'date']);
+    $this->addField('price',['type'=>'money']);
+  }
+}
