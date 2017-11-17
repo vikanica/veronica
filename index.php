@@ -45,3 +45,5 @@ $form->onSubmit(funktion($form) {
 $form->model->save();
 return $form->success('Record updated');
 });
+
+$button = $app->layout->add(['Label', 'Хочу новое обновление!']);
