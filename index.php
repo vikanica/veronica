@@ -12,7 +12,7 @@ if(isset($_SESSION['a'])){
   $_SESSION['n']=$m;
 }else{
   $_SESSION['n']=1;
-
+  $_SESSION['a']=1;
 }
 
 
