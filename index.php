@@ -20,7 +20,7 @@ if(isset($_SESSION['a'])){
 $label = $app->layout->add(['Label', $m]);
 $button_inc = $app->add(['Button','+']);
 $button_inc->link(['index']);
-$button_res = $app->add(['Button','restart']);
+$button_res = $app->add(['Button','Restart']);
 $button_res->link(['logout']);
 $number=$_SESSION['n']/$_SESSION['a'];
 $label = $app->layout->add(['Label', $number]);
