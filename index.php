@@ -7,9 +7,9 @@ $app = new \atk4\ui\App('Добро пожаловать в таблицу!');
 $app->initLayout('Centered');
 session_start();
 if(isset($_SESSION['a'])){
-  $m=$_SESSION['a']+$_SESSION['n'];
+  $m=$_SESSION['a'];
   $_SESSION['a']=$_SESSION['n'];
-  $_SESSION['n']=$m;
+  $_SESSION['n']=$m+$_SESSION['n'];
 }else{
   $_SESSION['n']=1;
   $_SESSION['a']=1;
