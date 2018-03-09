@@ -1,13 +1,13 @@
 
 <?php
 require 'vendor/autoload.php';
+require 'app.php';
 
 use \atk4\ui\Header;
 
-$app = new \atk4\ui\App('Добро пожаловать в таблицу!');
-$app->initLayout('Centered');
+$app = new App('public');
 
-/*$db = new
+/* $db = new
 \atk4\data\Persistence_SQL('mysql:dbname=cats;host=localhost','root','');
 class cat extends \atk4\data\Model {
 
@@ -26,7 +26,7 @@ class cat extends \atk4\data\Model {
   }
 } */
 $db = new
-\atk4\data\Persistence_SQL('mysql:dbname=friends;host=localhost','root','');
+\atk4\data\Persistence_SQL('mysql:dbname=main_db;host=localhost','root','');
 class Friends extends \atk4\data\Model {
   	public $table = 'friends';
 function init() {
@@ -35,7 +35,7 @@ function init() {
     $this->addField('surname');
     $this->addField('phone_number',['default'=>371]);
     $this->addField('email');
-  	$this->addField('password',['type'=>'password']);
+  	//$this->addField('password',['type'=>'password']);
     $this->addField('birthday',['type'=>'date']);
     $this->addField('notes', ['type'=>'text']);
 }
