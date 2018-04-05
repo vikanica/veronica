@@ -96,3 +96,6 @@ $crud->addQuickSearch(['name','surname']);
 
     });
     session_start();*/
+    $app->add(['ui'=>'divider']);
+
+    $app->layout->add(['Button','Admin','violet','icon'=>'tasks'])->link(['check']);
